@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2022 at 09:13 PM
+-- Generation Time: Jun 08, 2022 at 12:26 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -66,6 +66,30 @@ INSERT INTO `job` (`job_id`, `job_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+  `product_id` int(11) NOT NULL,
+  `product_name` varchar(200) DEFAULT NULL,
+  `product_price` double DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`product_id`, `product_name`, `product_price`) VALUES
+(2, 'psikologi pekerjaan', 400000),
+(3, 'konsultasi pekerjaan', 500000),
+(4, 'psikologi pekerjaan', 400000),
+(5, 'meditasi membantu stress', 600000),
+(6, 'meditasi membantu stress', 600000),
+(7, 'meditasi membantu stress', 700000);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `worker`
 --
 
@@ -114,6 +138,12 @@ ALTER TABLE `job`
   ADD PRIMARY KEY (`job_id`);
 
 --
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`product_id`);
+
+--
 -- Indexes for table `worker`
 --
 ALTER TABLE `worker`
@@ -136,6 +166,12 @@ ALTER TABLE `company`
 --
 ALTER TABLE `job`
   MODIFY `job_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `worker`
