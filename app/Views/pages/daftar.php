@@ -58,7 +58,9 @@
               ?>
                 <option value="<?= // tampilkan data id kategori 
                                 $company["company_id"]
-                                ?>" style="padding:2px;" <?= (old('worker-company') == $company['company_id']) ? 'selected' : ''; ?>>
+                                ?>" style="padding:2px;" 
+                                <?= (old('worker-company') == $company['company_id']) ? 'selected' : ''; ?>
+                                >
                   <!-- tampilkan data nama kategori -->
                   <?= $company["company_name"] ?>
                 </option>

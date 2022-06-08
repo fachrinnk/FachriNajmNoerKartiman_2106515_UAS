@@ -38,6 +38,8 @@ $routes->get('/about-us', 'Mari::about');
 $routes->get('/contact-us', 'Mari::contact');
 $routes->get('/daftar', 'Mari::daftar');
 $routes->get('/admin', 'Mari::admin');
+$routes->resource('products');
+
 
 
 /*
