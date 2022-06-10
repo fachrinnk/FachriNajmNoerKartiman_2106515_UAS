@@ -21,6 +21,7 @@ class Filters extends BaseConfig
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
+        'auth'          => \App\Filters\Auth::class,
         'cors'          => \App\Filters\Cors::class, 
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,

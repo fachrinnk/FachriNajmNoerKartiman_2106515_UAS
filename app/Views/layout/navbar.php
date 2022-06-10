@@ -13,6 +13,7 @@
         <li class="nav-item"><a class="nav-link" href="/contact-us">Kontak Kami</a></li>
         <li class="nav-item"><a class="nav-link" href="/daftar">daftar</a></li>
         <li class="nav-item"><a class="nav-link active" aria-current="page" href="/admin">Admin Page</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/Login/logout">Keluar</a></li>
 
       </ul>
     </div>

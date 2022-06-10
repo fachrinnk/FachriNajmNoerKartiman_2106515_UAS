@@ -31,13 +31,14 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Mari::index');
+$routes->get('/', 'Mari::index',['filter' => 'auth']);
 $routes->get('/Mari', 'Mari::index');
 $routes->delete('/Mari/(:num)', 'Mari::delete/$1');
 $routes->get('/about-us', 'Mari::about');
 $routes->get('/contact-us', 'Mari::contact');
 $routes->get('/daftar', 'Mari::daftar');
 $routes->get('/admin', 'Mari::admin');
+$routes->get('/login', 'Login::index');
 $routes->resource('products');
 
 

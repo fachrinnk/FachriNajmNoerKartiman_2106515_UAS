@@ -5,23 +5,30 @@ namespace App\Controllers;
 use App\Models\CompanyModel;
 use App\Models\JobModel;
 use App\Models\WorkerModel;
+use App\Models\UserModel;
 
 class Mari extends BaseController
 {
   public $companyModel;
   public $jobModel;
   public $workerModel;
+  public $session;
+  
   public function __construct()
   {
     $this->companyModel = new CompanyModel();
     $this->workerModel = new WorkerModel();
     $this->jobModel = new JobModel();
+    $this->session = session();
   }
 
   public function index()
   {
+    
     echo view('pages/home');
   }
+
+  
 
   public function daftar()
   {
